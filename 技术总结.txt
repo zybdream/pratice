@@ -1,0 +1,50 @@
+// 获取应用程序对象
+UIApplication *app = [UIApplication shareApplication];
+// 设置网络指示器可见
+app.networkActivityIndicatorVisible=YES;
+
+// UIViewController设置状态栏样式
+-(UISatusBarStyle)preferredStatusBarStyle
+{	
+     return UIStatusBarStyleDefault;
+}
+
+// UIViewCOntroller设置状态栏是否隐藏
+-(BOOL)prefersStatusBarHidden
+{
+     return no;
+}
+
+//UIAplication设置状态栏是否隐藏
+UIApplication  *app = [UIApplication shareApplication];
+[app setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+app.statusBarHidden = YES;
+
+// 设置状态栏隐藏 + 动画
+[app setStautsBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+
+OPENURL:方法
+OPENURL的部分方法的功能有：
+UIApplication *app  = [UIApplicatin shareApplication];
+1、打电话 
+[app openURL:[NSURL UrlWithString:@"tel://111"]];
+
+2、发短信
+[app openuURL:[NSURL UrlWithString:@"sms://111"]];
+
+3、发邮件
+[app openURL:[NSURL UrlWithString:@"mailto"//111@123.com"]];
+
+4、打开一个网页资源
+[app openURL:[NSURL UrlWithString:@http://ios.itcast.cn]];
+
+5、打开其他的app
+在A中打开B
+（1）首先要在B中设置URLtypes 中的URL Schemes的值，假如为（zhu）
+（2）设置URL identifier com.zhu.app
+[app openURL:[NSURL urlWithString:@"zhu://com.zhu.app"]];
+
+
+
+
+
